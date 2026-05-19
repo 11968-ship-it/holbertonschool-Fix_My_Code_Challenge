@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """FizzBuzz"""
+import sys
 
 
-def fizzbuzz():
-    """Prints numbers from 1 to 100"""
-    for i in range(1, 101):
+def fizzbuzz(n):
+    """Print FizzBuzz sequence up to n"""
+    for i in range(1, n + 1):
         if i % 3 == 0 and i % 5 == 0:
             print("FizzBuzz", end=" ")
         elif i % 3 == 0:
@@ -16,4 +17,5 @@ def fizzbuzz():
 
 
 if __name__ == "__main__":
-    fizzbuzz()
+    n = int(sys.argv[1])
+    fizzbuzz(n)
